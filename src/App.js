@@ -1,5 +1,6 @@
 import './App.css';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import Coin from "./components/Coin/Coin.jsx";
 
 const tg = window.Telegram.WebApp;
 
@@ -9,14 +10,17 @@ function App() {
         tg.ready()
     }, [])
 
-    const onClose = () => {
-        tg.close();
-    }
+    const [score, setScore] = useState(0);
+
+    const incrementScore = () => {
+        setScore(score + 1);
+    };
 
     return (
         <div className="App">
-            work
-            <button onClick={onClose}>Close</button>
+            <h1>Click the Coin!</h1>
+            <h2>Score: {score}</h2>
+            <Coin incrementScore={incrementScore} />
         </div>
     );
 }
