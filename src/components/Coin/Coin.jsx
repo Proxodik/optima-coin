@@ -7,7 +7,7 @@ const Coin = ({ incrementScore }) => {
 
     return (
         <div className="coin" onClick={handleClick}>
-            <img src="src/img/коин2-removebg-preview.png" alt="coin"/>
+            <img src="/img/коин2-removebg-preview.png" alt="coin"/>
         </div>
     );
 };

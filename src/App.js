@@ -18,9 +18,9 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Click the Coin!</h1>
-            <h2>Score: {score}</h2>
+            <h1>Optima Coin</h1>
             <Coin incrementScore={incrementScore} />
+            <h2 className={'Score'}>Score: {score}</h2>
         </div>
     );
 }
